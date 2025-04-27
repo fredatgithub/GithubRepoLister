@@ -38,7 +38,7 @@ namespace GithubRepoLister
         client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("ConsoleApp", "1.0"));
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", token);
 
-        var url = "https://api.github.com/user/repos";
+        const string url = "https://api.github.com/user/repos";
         var response = await client.GetAsync(url);
         if (!response.IsSuccessStatusCode)
         {
